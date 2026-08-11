@@ -18,29 +18,11 @@ print('Нам потребуются некоторые данные о Ваше
 
 # 2. Сбор данных
 user_weight = float(input('Какой у вас вес (в килограммах)? '))
-
 user_height = float(input('Укажите рост в метрах. Разделяйте точкой: "1.75" '))
 
 # 3. Логика расчетов
-
-
-def index_bmi(weight_kg, height_m):
-    """рассчитываем индекс ИМТ"""
-    bmi_output = weight_kg / (height_m ** 2)
-    bmi_round = round(bmi_output, 1)
-    return bmi_round
-
-
-def volume_water(weight_kg):
-    """рассчитываем норму объёма воды"""
-    water_ml = weight_kg * 30
-    water_l = water_ml / 1000
-    water_l_round = round(water_l)
-    return water_l_round
-
-
-bmi = index_bmi(user_weight, user_height)  # Индекс Массы Тела пользователя
-water = volume_water(user_weight)  # норма объёма воды пользователя
+bmi = round(weight_kg / (height_m ** 2), 1)  # Индекс Массы Тела пользователя
+water = round((weight_kg * 30)/1000)  # норма объёма воды пользователя
 
 # 4. Вывод красивого результата
 print('=' * 70)
