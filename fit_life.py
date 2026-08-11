@@ -21,8 +21,8 @@ user_weight = float(input('Какой у вас вес (в килограмма�
 user_height = float(input('Укажите рост в метрах. Разделяйте точкой: "1.75": '))
 
 # 3. Логика расчетов
-bmi = round(user_weight / (user_height ** 2), 1)  # Индекс Массы Тела пользователя
-water = round((user_weight * 30)/1000)  # норма объёма воды пользователя
+bmi = round(user_weight / (user_height ** 2), 1)  # имт
+water = round((user_weight * 30) / 1000)  # вода
 
 # 4. Вывод красивого результата
 print('=' * 70)
