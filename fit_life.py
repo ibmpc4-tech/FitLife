@@ -23,12 +23,11 @@ user_height = float(input('Рост в метрах. Пример:"1.75". Раз
 # 3. Логика расчетов
 bmi = user_weight / (user_height ** 2)  # имт
 water = (user_weight * 30) / 1000  # вода
-water_rounded = round(water)
 
 # 4. Вывод красивого результата
 print('=' * 70)
 print(f'Отчёт для пользователя {user_name} (возраст: {user_age})')
-print(f'Ваш Индекс Массы Тела (ИМТ): {round(bmi, 1)}')
-print(f'Рекомендуемая норма воды: {water_rounded} л. в день')
+print(f'Ваш Индекс Массы Тела (ИМТ): {bmi:.1f}')
+print(f'Рекомендуемая норма воды: {water:.0f} л. в день')
 print("Расчет окончен. Будьте здоровы!")
 print('.' * 70)
