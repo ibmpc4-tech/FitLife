@@ -22,11 +22,9 @@ print(
 )
 
 # 2. Сбор данных
-weight_input = input('Какой у вас вес? (в килограммах): ')
-user_weight = float(weight_input.replace(',', '.'))  # вес
+user_weight = float(input('Какой у вас вес? (кг): ').replace(',', '.'))
+user_height = float(input('Какой у вас рост? [1.75] (м): ').replace(',', '.'))
 
-height_input = input('Какой у вас рост? [Пример: 1.73] (ТОЛЬКО в метрах): ')
-user_height = float(height_input.replace(',', '.'))  # рост
 
 # 3. Логика расчетов
 bmi = user_weight / (user_height ** 2)  # ИМТ
