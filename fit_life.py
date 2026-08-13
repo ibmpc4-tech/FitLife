@@ -1,9 +1,10 @@
 # Проект FitLife - MVP версия 1.0
 
+SEPARATOR_WIDTH = 70
+ML_PER_KG = 30          # сколько миллилитров воды на 1 кг веса
+ML_TO_LITERS = 1000     # сколько мл в одном литре
 
 # 1. Знакомство
-SEPARATOR_WIDTH = 70
-
 print('=' * SEPARATOR_WIDTH)
 print('Здравствуйте! Вас приветствует программа FitLife')
 
@@ -21,16 +22,13 @@ print(
 )
 
 # 2. Сбор данных
-w = input('Какой у вас вес? (в килограммах): ')  # вес
-user_weight = float(w.replace(',', '.'))  # это узнал у ИИ
+weight_input = input('Какой у вас вес? (в килограммах): ')
+user_weight = float(weight_input.replace(',', '.'))  # вес
 
-h = input('Какой у вас рост? [Пример: 1.73] (ТОЛЬКО в метрах): ')  # рост
-user_height = float(h.replace(',', '.'))  # это узнал у ИИ
+height_input = input('Какой у вас рост? [Пример: 1.73] (ТОЛЬКО в метрах): ')
+user_height = float(height_input.replace(',', '.'))  # рост
 
 # 3. Логика расчетов
-ML_PER_KG = 30          # сколько миллилитров воды на 1 кг веса
-ML_TO_LITERS = 1000     # сколько мл в одном литре
-
 bmi = user_weight / (user_height ** 2)  # ИМТ
 water = (user_weight * ML_PER_KG) / ML_TO_LITERS  # вода
 
